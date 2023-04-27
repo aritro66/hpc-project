@@ -1,5 +1,6 @@
 /* eslint-disable react/prop-types */
 import { Form, Card } from "react-bootstrap";
+import { Link, NavLink } from "react-router-dom";
 
 const ConfigPanel = ({ config, setConfig }) => {
   return (
@@ -54,6 +55,22 @@ const ConfigPanel = ({ config, setConfig }) => {
           </Form.Group>
         </Form>
       </Card.Body>
+      <NavLink
+        to="/mandelbrot"
+        style={(isActive) => ({
+          color: isActive ? "green" : "blue",
+        })}
+      >
+        Mandelbrot
+      </NavLink>
+      <NavLink
+        to="/juliaset"
+        style={(isActive) => ({
+          color: isActive ? "green" : "blue",
+        })}
+      >
+        JuliaSet
+      </NavLink>
     </Card>
   );
 };
