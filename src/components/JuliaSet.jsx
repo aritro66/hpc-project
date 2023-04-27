@@ -5,7 +5,7 @@ import { Surface } from "gl-react-dom";
 import { Shaders, Node, GLSL } from "gl-react";
 
 const shaders = Shaders.create({
-  mandelbrot: {
+  juliaset: {
     frag: GLSL`
 precision highp float;
 
@@ -178,7 +178,7 @@ const JuliaSet = ({
       onWheel={handleScrollZoom}
     >
       <Node
-        shader={shaders.mandelbrot}
+        shader={shaders.juliaset}
         uniforms={{
           u_zoomCenter: zoomCenter,
           u_zoomSize: zoomSize,
